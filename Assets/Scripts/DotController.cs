@@ -24,24 +24,10 @@ public class DotController : MonoBehaviour
 
             posY = posY - 0.9F;
             }
-            // posX = posX - 0.9F;
             for(int j = 0; j < 5; j++){
-            //     if(j > 0){
-
-            // posY = posY - 0.9F;
-            // posX = DotVariable.transform.position.x;
-            // }
-            
-            // Instantiate(DotVariable, new Vector3(i * 2.0F, 0, 0), Quaternion.identity);
-
-            // GameObject enemy = Instantiate(DotVariable, new Vector3(i * 2.0F, 0, 0), Quaternion.identity) as GameObject;
-            // enemy.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-
-            // GameObject SingleDot = Instantiate(DotVariable, new Vector2((posX + 0.9F), posY), Quaternion.identity) as GameObject;
             GameObject SingleDot = Instantiate(DotVariable, new Vector3((posX + 0.9F), posY, posZ), Quaternion.identity);
             SingleDot.transform.localScale = new Vector3(0.0274F, 0.0274F, 0.0274F);
             posX = posX + 0.9F;
-            // posY = posY + 0.9F;
             SingleDot.transform.SetParent(canv.transform);
             }
         }
