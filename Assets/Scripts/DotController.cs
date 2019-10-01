@@ -10,6 +10,7 @@ public class DotController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         CreateGrid();
     }
 
@@ -20,7 +21,7 @@ public class DotController : MonoBehaviour
             for (int col = 0; col < 8; col++)
             {
                 GameObject currentDot = Instantiate(dotPrefab, new Vector3(dotPrefab.transform.position.x + (col * 1.5f),
-                dotPrefab.transform.position.y + (row * -1.5f), canv.transform.position.z), Quaternion.identity);
+                dotPrefab.transform.position.y + (row * -1.5f), canv.transform.position.z), Quaternion.identity) as GameObject;
                 currentDot.transform.SetParent(canv.transform);
             }
         }
